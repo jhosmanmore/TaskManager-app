@@ -1,0 +1,32 @@
+<section class="register-container">
+  <h2>Registro</h2>
+
+  <div *ngIf="error" class="error">{{ error }}</div>
+  <div *ngIf="success" class="success">{{ success }}</div>
+  <button *ngIf="success" class="link-button-gtl" (click)="goToLogin()">Ir a iniciar sesión</button>
+
+  <form (ngSubmit)="register()" class="register-form">
+    <input [(ngModel)]="name" name="name" placeholder="Nombre completo" required />
+    <input [(ngModel)]="username" name="username" placeholder="Usuario" required />
+    <input [(ngModel)]="password" name="password" type="password" placeholder="Contraseña" required />
+      <small *ngIf="isPasswordTooShort" class="warning">
+        La contraseña debe contener al menos 6 caracteres y sin signos especiales.
+      </small>
+      <small *ngIf="isPasswordMissingNumber" class="warning">
+        La contraseña debe contener al menos un número.
+      </small>
+      <small *ngIf="isPasswordMissingLetter" class="warning">
+        La contraseña debe contener al menos una letra.
+      </small>
+    <button type="submit" [disabled]="isLoading">
+      <span *ngIf="isLoading" class="spinner"></span>
+      <span *ngIf="!isLoading">Registrarse</span>
+    </button>
+  </form>
+    <button class="link-button" (click)="goToLogin()">¿Ya tienes cuenta? Inicia sesión</button>
+    <div class="demo-info">
+      <p>🔐 <strong>Modo demo:</strong> Puedes iniciar sesión con:</p>
+      <p><strong>Usuario:</strong> Demo</p>
+      <p><strong>Contraseña:</strong> appdemo2025</p>
+    </div>
+</section>

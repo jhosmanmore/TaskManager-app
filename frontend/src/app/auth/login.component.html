@@ -1,0 +1,23 @@
+<section class="login-container">
+  <h2>Iniciar Sesión</h2>
+
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+  <form (ngSubmit)="login()" class="login-form">
+    <input [(ngModel)]="username" name="username" placeholder="Usuario" required />
+    <input [(ngModel)]="password" name="password" type="password" placeholder="Contraseña" required />
+    <!-- <button type="submit">Entrar</button> -->
+    <button type="submit" [disabled]="isLoading">
+      <span *ngIf="!isLoading">Entrar</span>
+      <span *ngIf="isLoading" class="spinner"></span>
+    </button>
+  </form>
+
+  <button class="link-button" (click)="goToRegister()">¿No tienes una cuenta? Regístrate</button>
+  <div class="demo-info">
+    <p>🔐 <strong>Modo demo:</strong> Puedes iniciar sesión con:</p>
+    <p><strong>Usuario:</strong> Demo</p>
+    <p><strong>Contraseña:</strong> appdemo2025</p>
+  </div>
+
+</section>

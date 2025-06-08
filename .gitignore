@@ -1,0 +1,29 @@
+# Node.js
+/backend/node_modules
+/backend/.env
+/backend/dist
+/backend/logs
+/backend/npm-debug.log*
+/backend/clearUsers.js
+
+# Angular
+/frontend/node_modules
+/frontend/dist
+/frontend/.angular/cache
+/frontend/.angular
+
+# Common
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+# OS generated files
+ehthumbs.db
+Icon?
+Desktop.ini

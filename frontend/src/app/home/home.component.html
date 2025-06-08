@@ -1,0 +1,39 @@
+<section class="home-container">
+  <header class="home-header">
+    <div class="logo-title">
+      <img src="assets/notas.png" alt="Logo TaskManager" class="logo" />
+      <span class="title-text">TaskManager</span>
+    </div>
+  
+    <button class="info-button" (click)="showInfo = true"><img src="assets/informacion.png" alt="Logo TaskManager" class="img-info" /></button>
+  </header>
+  
+  <div class="modal" *ngIf="showInfo">
+    <div class="modal-content">
+      <span class="close-button" (click)="showInfo = false">&times;</span>
+      <h2>Acerca de</h2>
+      <p><strong>Desarrollado por:</strong> Jhosman Moreno</p>
+      <p>
+        <a class="logo-sn-title" href="https://github.com/jhosmanmore" target="_blank"><img src="assets/github.png" alt="GitHub" class="logo-sn">GitHub</a> |
+        <a class="logo-sn-title" href="https://linkedin.com/in/jhosman-moreno" target="_blank"><img src="assets/linkedin.png" alt="LinkedIn" class="logo-sn">LinkedIn</a>
+      </p>
+    </div>
+  </div>
+
+  <h1 class="home-title">Organiza tu vida con <span class="highlight">TaskManager</span></h1>
+
+  <p>Administra tus tareas de forma sencilla, rápida y segura.</p>
+
+  <div class="buttons">
+    <button (click)="goToLogin()">Iniciar Sesión</button>
+    <button (click)="goToRegister()">Registrarse</button>
+  </div>
+  <div class="intro-section">
+    <div class="intro-text">
+      <p class="slogan"><img src="assets/bulb-gif.gif" alt="bulb-gif" class="logo" /><br>Crea, completa y <br>organiza tus ideas</p>
+    </div>
+    <div class="example-image-container">
+      <img src="assets/pre.png" alt="Interfaz de tareas" />
+    </div>
+  </div>
+</section>
