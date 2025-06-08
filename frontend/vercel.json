@@ -5,8 +5,6 @@
   ],
   "functions": {
     "api/server.js": {
-      "runtime": "nodejs18.x",
-      "handler": "dist/frontend/server/server.mjs",
       "includeFiles": "dist/frontend/server/**"
     }
   }
